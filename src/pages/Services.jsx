@@ -79,7 +79,7 @@ const Services = () => {
                         {
                             title: "Retail Solutions – POS & Traffic Management",
                             desc: "Complete POS ecosystems, inventory systems, customer flow analytics, queue management, and retail automation solutions.",
-                            img: "/static/images/s12.jpg"
+                            img: "/static/images/retail.png"
                         },
                         {
                             title: "Video Wall & LED Display Systems",

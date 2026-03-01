@@ -86,7 +86,7 @@ const Products = () => {
                         </div>   <div className="col">
                             <div className="card product-card">
                                 <div className="product-img-wrapper">
-                                    <div className="product-img-bg" style={{ backgroundImage: "url('/static/images/p8.jpg')" }}></div>
+                                    <div className="product-img-bg" style={{ backgroundImage: "url('/static/images/retail.png')" }}></div>
                                 </div>
                                 <div className="card-body">
                                     <h5 className="product-title">Retail Solutions – POS & Traffic Management

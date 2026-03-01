@@ -123,7 +123,7 @@ const Products = () => {
         {
             title: "Retail & POS Products",
             subtitle: "Retail Automation",
-            image: "/static/images/p8.jpg",
+            image: "/static/images/retail.png",
             description: "Unified point-of-sale solutions and inventory management tools to streamline retail operations.",
             items: [
                 "POS Terminals",
