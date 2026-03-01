@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
+    const location = useLocation();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -16,6 +17,13 @@ const Navbar = () => {
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    const isActive = (path) => {
+        if (path === '/') {
+            return location.pathname === '/';
+        }
+        return location.pathname.startsWith(path);
+    };
 
     return (
         <nav className={`navbar navbar-expand-lg fixed-top mx-auto ${scrolled ? 'scrolled' : ''}`} id="mainNavbar">
@@ -32,22 +40,22 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
                     <ul className="navbar-nav">
                         <li className="nav-item nav-item-spaced">
-                            <Link className="nav-link active" aria-current="page" to="/">Home</Link>
+                            <Link className={`nav-link ${isActive('/') ? 'active' : ''}`} to="/">Home</Link>
                         </li>
                         <li className="nav-item nav-item-spaced">
-                            <Link className="nav-link" to="/about-us">About Us</Link>
+                            <Link className={`nav-link ${isActive('/about-us') ? 'active' : ''}`} to="/about-us">About Us</Link>
                         </li>
                         <li className="nav-item nav-item-spaced">
-                            <Link className="nav-link" to="/brands">Brands</Link>
+                            <Link className={`nav-link ${isActive('/brands') ? 'active' : ''}`} to="/brands">Brands</Link>
                         </li>
                         <li className="nav-item nav-item-spaced">
-                            <Link className="nav-link" to="/products">Products</Link>
+                            <Link className={`nav-link ${isActive('/products') ? 'active' : ''}`} to="/products">Products</Link>
                         </li>
                         <li className="nav-item nav-item-spaced">
-                            <Link className="nav-link" to="/services">Services</Link>
+                            <Link className={`nav-link ${isActive('/services') ? 'active' : ''}`} to="/services">Services</Link>
                         </li>
                         <li className="nav-item nav-item-spaced">
-                            <Link className="nav-link" to="/contact-us">Contact Us</Link>
+                            <Link className={`nav-link ${isActive('/contact-us') ? 'active' : ''}`} to="/contact-us">Contact Us</Link>
                         </li>
                     </ul>
                 </div>

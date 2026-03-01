@@ -69,6 +69,15 @@ body {
     color: #FFF !important;
 }
 
+.nav-link.active {
+    color: #0B5394 !important;
+    text-decoration: underline !important;
+    text-underline-offset: 8px;
+    text-decoration-thickness: 2px;
+    background: transparent !important;
+    /* Ensure the white capsule background is removed if it's problematic */
+}
+
 
 
 .btn.req-btn {
@@ -470,6 +479,16 @@ body {
 }
 
 .about-text-1 {
+    color: #000;
+    font-family: Poppins;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.875rem;
+    /* 166.667% */
+}
+
+.about-text-2 {
     color: #000;
     font-family: Poppins;
     font-size: 1.125rem;
@@ -1096,4 +1115,98 @@ footer {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+}
+
+/* Brands Section Styling */
+.brands-page-section {
+    padding: 4rem 0;
+}
+
+.brand-category-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #1a1a1a;
+    border-left: 4px solid #0B5394;
+    padding-left: 1rem;
+}
+
+.brand-scroll-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    padding: 2rem 0;
+    margin-bottom: 3rem;
+    /* Mask for smooth fade at edges */
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.brand-scroll-track {
+    display: flex;
+    gap: 30px;
+    width: fit-content;
+    animation: scroll-brands 40s linear infinite;
+}
+
+.brand-scroll-container:hover .brand-scroll-track {
+    animation-play-state: paused;
+}
+
+@keyframes scroll-brands {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.brand-logo-card {
+    flex: 0 0 250px;
+    height: 120px;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.brand-logo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    border-color: #0B5394;
+}
+
+.brand-logo-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* Fallback for missing logos */
+.brand-name-fallback {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: #333;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .brand-logo-card {
+        flex: 0 0 180px;
+        height: 90px;
+        padding: 1rem;
+    }
+
+    .brand-category-title {
+        font-size: 1.5rem;
+    }
 }

@@ -1,6 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const About = () => {
+    const navigate = useNavigate();
+
     return (
         <div className="section-1">
             <div className="container">
@@ -17,26 +20,33 @@ const About = () => {
                     <div className="row row-cols-1 row-cols-md-2 g-4">
                         <div className="col">
                             <p className="about-text-1">
-                                We are a leading provider of networking and communication solutions, dedicated to helping businesses build robust, secure, and scalable IT infrastructures. Our team of certified professionals brings decades of combined experience in designing and implementing enterprise-grade technology solutions.
+                                Cloudserve is a trusted provider of smart networking and communication solutions, committed to helping businesses build secure, high-performance IT environments. With more than a decade of industry experience, our team offers deep technical expertise in designing, deploying, and maintaining enterprise-grade solutions.
                             </p>
-                            <h5 className="about-heading-1">Why Choose Us</h5>
+                            <p className="about-text-2">We combine innovative technologies with practical implementation knowledge to deliver seamless, future-ready infrastructure across diverse industries</p>
+                            <h5 className="about-heading-1">Why Choose Cloudserve</h5>
                             <div className="why-tab mt-4">
-                                <img src="/static/icons/charm_tick.svg" alt="tick" /><p className="why-text">15+ years of industry experience</p>
+                                <img src="/static/icons/charm_tick.svg" alt="tick" /><p className="why-text">15+ years of industry expertise</p>
                             </div>
                             <div className="why-tab mt-2">
-                                <img src="/static/icons/charm_tick.svg" alt="tick" /><p className="why-text">500+ successful project implementations</p>
+                                <img src="/static/icons/charm_tick.svg" alt="tick" /><p className="why-text">500+ successful implementations across multiple sectors</p>
                             </div>
                             <div className="why-tab mt-2">
-                                <img src="/static/icons/charm_tick.svg" alt="tick" /><p className="why-text">24/7 technical support and monitoring</p>
+                                <img src="/static/icons/charm_tick.svg" alt="tick" /><p className="why-text">24/7 technical support & remote monitoring</p>
                             </div>
                             <div className="why-tab mt-2">
-                                <img src="/static/icons/charm_tick.svg" alt="tick" /><p className="why-text">Certified partnerships with leading vendors</p>
+                                <img src="/static/icons/charm_tick.svg" alt="tick" /><p className="why-text">Certified partnerships with global technology leaders</p>
                             </div>
                             <div className="why-tab mt-2">
-                                <img src="/static/icons/charm_tick.svg" alt="tick" /><p className="why-text">ISO-aligned security & deployment standards</p>
+                                <img src="/static/icons/charm_tick.svg" alt="tick" /><p className="why-text">ISO-aligned security & deployment standardss</p>
                             </div>
 
-                            <button type="button" className="btn about-btn mt-4">About Us<img src="/static/icons/uil_arrow-up.svg" alt="arrow" /></button>
+                            <button
+                                type="button"
+                                className="btn about-btn mt-4"
+                                onClick={() => navigate('/about-us')}
+                            >
+                                About Us<img src="/static/icons/uil_arrow-up.svg" alt="arrow" />
+                            </button>
 
                         </div>
                         <div className="col">

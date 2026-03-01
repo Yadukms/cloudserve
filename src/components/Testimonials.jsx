@@ -26,7 +26,7 @@ const Testimonials = () => {
                                             <div className="card-body">
                                                 <img src="/static/icons/ri_double-quotes-l.svg" style={{ display: 'flex', alignItems: 'center' }} alt="quote" />
                                                 <p className="test-text-1 mt-2">
-                                                    "Cloudserve transformed our entire IT infrastructure. Their expertise in networking solutions helped us achieve 99.9% uptime and significantly improved our operational efficiency."
+                                                    “We appreciate Cloudserve’s expertise in building and maintaining our IT infrastructure. Their team ensured reliability, performance, and timely support throughout our operations.”
                                                 </p>
                                                 <p className="test-text-2">Sarah Johnson</p>
                                                 <p className="test-text-3">IT Director</p>
@@ -34,7 +34,7 @@ const Testimonials = () => {
                                             </div>
                                         </div>
                                     </div>
-                                    <div className="carousel-item" data-bs-interval="2000">
+                                    {/* <div className="carousel-item" data-bs-interval="2000">
                                         <div className="card testimonial-card">
                                             <div className="card-body">
                                                 <img src="/static/icons/ri_double-quotes-l.svg" style={{ display: 'flex', alignItems: 'center' }} alt="quote" />
@@ -59,7 +59,7 @@ const Testimonials = () => {
                                                 <p className="test-text-4">Global Tech Solutions</p>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>

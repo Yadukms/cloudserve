@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 
 const Services = () => {
     const swiperRef = useRef(null);
@@ -27,6 +28,7 @@ const Services = () => {
                     </div>
                     <h1 className="section-heading-1">Our Core Activities</h1>
                     <p className="section-subheading-1">Cloudserve offers a complete range of IT, security, AV, and automation services tailored to different business environments.</p>
+                    <Link to="/services" className="btn about-btn mt-4">Services <img src="/static/icons/uil_arrow-up.svg" alt="arrow" /></Link>
                 </div>
             </div>
 
@@ -41,8 +43,8 @@ const Services = () => {
                                         <div className="col-lg-6 col-md-12">
                                             <div className="card h-100 border-0" style={{ backgroundColor: 'rgba(44, 177, 143, 0.50)', borderRadius: '0.8rem', padding: '2rem' }}>
                                                 <div className="card-body d-flex flex-column justify-content-center">
-                                                    <h5 className="service-title">Control & Automation Supplies</h5>
-                                                    <p className="service-subtext mt-4">Cloudserve empowers industries to achieve smarter operations through a full suite of control and automation products.</p>
+                                                    <h5 className="service-title">Structured Cabling & Fiber Optic Solutions</h5>
+                                                    <p className="service-subtext mt-4">End-to-end structured cabling systems using Cat5e, Cat6, Cat6A, and high-quality fiber for reliable connectivity in offices, enterprises, and campuses.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -62,14 +64,14 @@ const Services = () => {
                                         <div className="col-lg-6 col-md-12">
                                             <div className="card h-100 border-0" style={{ backgroundColor: 'rgba(44, 177, 143, 0.50)', borderRadius: '0.8rem', padding: '2rem' }}>
                                                 <div className="card-body d-flex flex-column justify-content-center">
-                                                    <h5 className="service-title">IT Infrastructure</h5>
-                                                    <p className="service-subtext mt-4">Building robust and scalable IT foundations to support your business growth and digital transformation journey.</p>
+                                                    <h5 className="service-title">CCTV & Video Surveillance Solutions</h5>
+                                                    <p className="service-subtext mt-4">Complete IP-based surveillance including cameras, NVRs, VMS platforms, command centers, analytics, and monitoring solutions for all industry sectors.</p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="col-lg-6 col-md-12">
                                             <div className="card h-100 border-0">
-                                                <div className="services-img-bg" style={{ backgroundImage: "url('/static/images/fibre_optics.webp')", height: '100%', minHeight: '350px' }}></div>
+                                                <div className="services-img-bg" style={{ backgroundImage: "url('/static/images/s2.jpg')", height: '100%', minHeight: '350px' }}></div>
                                             </div>
                                         </div>
                                     </div>
@@ -83,14 +85,16 @@ const Services = () => {
                                         <div className="col-lg-6 col-md-12">
                                             <div className="card h-100 border-0" style={{ backgroundColor: 'rgba(44, 177, 143, 0.50)', borderRadius: '0.8rem', padding: '2rem' }}>
                                                 <div className="card-body d-flex flex-column justify-content-center">
-                                                    <h5 className="service-title">Security Solutions</h5>
-                                                    <p className="service-subtext mt-4">Comprehensive security systems including CCTV, access control, and cybersecurity to protect your assets.</p>
+                                                    <h5 className="service-title">IPTV & SMATV Distribution Systems</h5>
+                                                    <p className="service-subtext mt-4">High-definition IPTV/SMATV solutions for hotels, corporate buildings, residential towers, and commercial complexes.
+
+                                                    </p>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="col-lg-6 col-md-12">
                                             <div className="card h-100 border-0">
-                                                <div className="services-img-bg" style={{ backgroundImage: "url('/static/images/fibre_optics.webp')", height: '100%', minHeight: '350px' }}></div>
+                                                <div className="services-img-bg" style={{ backgroundImage: "url('/static/images/s3.jpg')", height: '100%', minHeight: '350px' }}></div>
                                             </div>
                                         </div>
                                     </div>

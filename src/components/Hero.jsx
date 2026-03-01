@@ -16,7 +16,9 @@ const Hero = () => {
                         <div className="row row-cols-1 row-cols-md-2 g-5 hero-main-row">
                             <div className="col">
                                 <h1 className="hero-title">Smart Networking & Communication Solutions</h1>
-                                <p className="hero-subtitle">Cloudserve empowers businesses with cutting-edge IT infrastructure and automation systems. We deliver reliable, scalable, and secure networking solutions for the digital age.</p>
+                                <p className="hero-subtitle">Cloudserve delivers reliable, scalable, and secure IT infrastructure designed for modern businesses.
+We help organizations build strong digital foundations through advanced networking, security, and automation systems.
+</p>
                             </div>
                             <div className="col d-flex flex-column justify-content-end">
                                 <div className="row row-cols-1 row-cols-md-3 g-3 stats-row">
@@ -26,11 +28,11 @@ const Hero = () => {
                                     </div>
                                     <div className="col">
                                         <h2 className="hero-number">120+</h2>
-                                        <p className="hero-text">Experts</p>
+                                        <p className="hero-text">Technical Projects</p>
                                     </div>
                                     <div className="col">
                                         <h2 className="hero-number">120+</h2>
-                                        <p className="hero-text">Completed Projects</p>
+                                        <p className="hero-text">Succesful Projects</p>
                                     </div>
                                 </div>
                             </div>
