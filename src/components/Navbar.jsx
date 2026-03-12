@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import QuoteModal from './QuoteModal';
 
 const Navbar = () => {
     const [scrolled, setScrolled] = useState(false);
+    const [showQuoteModal, setShowQuoteModal] = useState(false);
     const location = useLocation();
 
     useEffect(() => {
@@ -60,12 +62,13 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className="d-none d-lg-block ms-auto d-flex align-items-center">
-                    <a className="btn req-btn" href="#" >Request a Quote</a>
+                    <button className="btn req-btn" onClick={() => setShowQuoteModal(true)}>Request a Quote</button>
                     <button className="navbar-toggler off" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                 </div>
             </div>
+            <QuoteModal isOpen={showQuoteModal} onClose={() => setShowQuoteModal(false)} />
         </nav>
     );
 };
