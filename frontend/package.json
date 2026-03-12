@@ -106,7 +106,6 @@
     "type-check": "^0.4.0",
     "update-browserslist-db": "^1.2.3",
     "uri-js": "^4.4.1",
-    "vite": "^7.3.1",
     "which": "^2.0.2",
     "word-wrap": "^1.2.5",
     "yallist": "^3.1.1",
@@ -114,12 +113,14 @@
     "zod": "^4.3.6",
     "zod-validation-error": "^4.0.2"
   },
-  "devDependencies": {},
-"scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "preview": "vite preview"
-},
+  "devDependencies": {
+    "vite": "^7.3.1"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Yadukms/Cloudserve.git"
