@@ -17,8 +17,8 @@ const Hero = () => {
                             <div className="col">
                                 <h1 className="hero-title">Smart Networking & Communication Solutions</h1>
                                 <p className="hero-subtitle">Cloudserve delivers reliable, scalable, and secure IT infrastructure designed for modern businesses.
-We help organizations build strong digital foundations through advanced networking, security, and automation systems.
-</p>
+                                    We help organizations build strong digital foundations through advanced networking, security, and automation systems.
+                                </p>
                             </div>
                             <div className="col d-flex flex-column justify-content-end">
                                 <div className="row row-cols-1 row-cols-md-3 g-3 stats-row">
