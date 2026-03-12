@@ -14,14 +14,22 @@ app.post("/send-email", async (req, res) => {
 
     try {
 
-        const transporter = nodemailer.createTransport({
-            service: "gmail",
-            auth: {
-                user: process.env.EMAIL,
-                pass: process.env.PASSWORD
-            }
-        });
-
+        // const transporter = nodemailer.createTransport({
+        //     service: "gmail",
+        //     auth: {
+        //         user: process.env.EMAIL,
+        //         pass: process.env.PASSWORD
+        //     }
+        // });
+const transporter = nodemailer.createTransport({
+  host: "smtp.gmail.com",
+  port: 587,
+  secure: false,
+  auth: {
+    user: process.env.EMAIL,
+    pass: process.env.PASSWORD
+  }
+});
    const mailOptions = {
   from: process.env.EMAIL,
   to: process.env.EMAIL,
