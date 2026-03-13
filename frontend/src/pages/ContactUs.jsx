@@ -281,9 +281,8 @@ const ContactUs = () => {
                   {/* <textarea className="form-control p-3" rows="5" placeholder="Tell us about your needs...." style={{ borderRadius: '0.5rem', backgroundColor: '#fff', border: '1px solid #dee2e6' }}></textarea> */}
                 </div>
 
-                <button type="submit" className="btn btn-primary w-100 p-3" style={{ backgroundColor: '#0B5394', border: 'none', borderRadius: '0.5rem', fontWeight: '500' }}>
+                <button type="submit" className="btn send-btn">
                   Send Message <span className="ms-2"></span>
-                  {/* Replaced paper plane icon with generic text or icon if available, using text for now or simple unicode */}
                 </button>
               </form>
             </div>

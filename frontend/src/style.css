@@ -735,6 +735,25 @@ body {
     font-weight: 500;
     line-height: normal;
     width: 100%;
+    transition: all 0.3s ease;
+    /* Professional transition */
+    cursor: pointer;
+}
+
+.btn.send-btn:hover {
+    background: #084277;
+    /* Slightly darker on hover */
+    border-color: #084277;
+    transform: translateY(-2px);
+    /* Subtle lift */
+    box-shadow: 0 4px 12px rgba(11, 83, 148, 0.2);
+    color: #FFF;
+}
+
+.btn.send-btn:active {
+    transform: scale(0.98);
+    /* Press down effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 
