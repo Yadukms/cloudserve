@@ -13,8 +13,41 @@ const handleChange = (e) => {
     ...formData,
     [e.target.name]: e.target.value
   });
-};const handleSubmit = async (e) => {
+};
+// const handleSubmit = async (e) => {
+//   e.preventDefault();
+
+//   try {
+
+//     const response = await fetch("http://localhost:5000/send-email", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json"
+//       },
+//       body: JSON.stringify(formData)
+//     });
+
+//     const data = await response.json();
+
+//     console.log(data);
+
+//     alert("Message sent successfully");
+
+//   } catch (error) {
+
+//     console.error(error);
+
+//     alert("Failed to send message");
+
+//   }
+// };
+const handleSubmit = async (e) => {
   e.preventDefault();
+
+  if (!formData.fullName || !formData.email || !formData.message) {
+    alert("Please fill all required fields");
+    return;
+  }
 
   try {
 
@@ -28,13 +61,9 @@ const handleChange = (e) => {
 
     const data = await response.json();
 
-    console.log(data);
-
     alert("Message sent successfully");
 
   } catch (error) {
-
-    console.error(error);
 
     alert("Failed to send message");
 

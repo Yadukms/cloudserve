@@ -8,9 +8,13 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+
 app.post("/send-email", async (req, res) => {
 
     const { fullName, email, phone, message } = req.body;
+    if (!fullName || !email || !message) {
+    return res.status(400).json({ message: "Required fields missing" });
+}
 
     try {
 
