@@ -183,23 +183,27 @@ const Products = () => {
                 </div>
             </section>
 
-            <div className="container mt-5 mb-5">
-                <div className="row g-4">
+            <div className="container mt-4 mt-lg-5 mb-5">
+                <div className="row g-3 g-lg-4">
                     {productsData.map((product, index) => (
-                        <div className="col-lg-4 col-md-6" key={index}>
+                        <div className="col-12 col-md-6 col-lg-4" key={index}>
                             <div
                                 className="card h-100 border-0 product-card-hover"
-                                style={{ cursor: 'pointer', transition: 'transform 0.3s ease' }}
+                                style={{
+                                    cursor: 'pointer',
+                                    transition: 'transform 0.3s ease',
+                                    padding: '0 10px' // Added internal padding for safety
+                                }}
                                 onClick={() => setSelectedProduct(product)}
                                 data-bs-toggle="modal"
                                 data-bs-target="#productModal"
                             >
-                                <div style={{ borderRadius: '1rem', overflow: 'hidden', marginBottom: '1rem', height: '250px' }}>
+                                <div style={{ borderRadius: '1rem', overflow: 'hidden', marginBottom: '1rem', height: '200px' }}>
                                     <img src={product.image} alt={product.title} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
                                 </div>
-                                <div className="card-body p-0">
-                                    <h5 style={{ fontSize: '1.25rem', fontWeight: 'bold', marginBottom: '0.25rem', color: '#000' }}>{product.title}</h5>
-                                    <p style={{ color: '#0B5394', fontWeight: '500', fontSize: '0.9rem' }}>{product.subtitle}</p>
+                                <div className="card-body p-0 mt-2">
+                                    <h5 style={{ fontSize: 'clamp(1.15rem, 4.5vw, 1.25rem)', fontWeight: 'bold', marginBottom: '0.25rem', color: '#000' }}>{product.title}</h5>
+                                    <p style={{ color: '#0B5394', fontWeight: '500', fontSize: 'clamp(0.9rem, 3.5vw, 1rem)' }}>{product.subtitle}</p>
                                 </div>
                             </div>
                         </div>

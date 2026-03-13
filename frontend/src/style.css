@@ -10,6 +10,8 @@ html,
 body {
     -ms-overflow-style: none;
     scrollbar-width: none;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 * {
@@ -17,7 +19,14 @@ body {
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+}
 
+/* Base font scaling for mobile */
+@media (max-width: 768px) {
+    html {
+        font-size: 100%;
+        /* Ensure standard scaling */
+    }
 }
 
 body {
@@ -98,10 +107,40 @@ body {
     padding: 0.5rem 1rem;
 }
 
+.navbar-toggler {
+    border: none;
+    padding: 0.25rem 0.5rem;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
 .navbar-toggler.off {
     border-radius: 0.25rem;
     background: #FFF;
     padding: 0.5rem 1rem;
+}
+
+@media (max-width: 991px) {
+    .navbar {
+        padding: 0.5rem 1rem;
+        width: 100%;
+        max-width: 100vw;
+    }
+
+    .navbar-brand img {
+        width: 6rem;
+        height: auto;
+    }
+
+    .navbar-collapse {
+        background: #fff;
+        border-radius: 1rem;
+        margin-top: 0.5rem;
+        padding: 1.5rem;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
 }
 
 /**for scrolling**/
@@ -163,154 +202,78 @@ body {
 @media (max-width: 998px) {
     .home-header {
         height: auto !important;
-        /* Allow content to dictate height */
         min-height: 100vh !important;
-        /* Minimum full screen, but can grow */
-        padding-bottom: 2rem;
-        /* Add padding at bottom */
+        padding-bottom: 3rem;
     }
 
     .hero-title {
-        font-size: 2.5rem !important;
-        /* Override inline styles */
-    }
-
-    .section-heading-1 {
-        font-size: 2rem !important;
-        line-height: 1.3 !important;
-    }
-
-    .section-subheading-1 {
-        font-size: 1rem !important;
-    }
-
-    .card.header-card {
-        border-radius: 0 !important;
-        /* Full width on mobile often looks better without rounded corners, or keep small radius */
-    }
-
-    /* Adjust padding for sections */
-    .section-1 {
-        padding-top: 3rem !important;
-        padding-bottom: 3rem !important;
-    }
-
-    /* Adjust pill section alignment */
-    .pill-section,
-    .pill-section-1 {
-        align-items: flex-start !important;
+        font-size: clamp(2.5rem, 10vw, 3.8rem) !important;
+        line-height: 1.1 !important;
+        margin-bottom: 2rem !important;
         text-align: left !important;
-    }
-
-    /* Stack flex containers that shouldn't be side-by-side */
-    .d-flex {
-        flex-wrap: wrap;
-    }
-
-    /* Allow nice scrolling for swiper/overflow elements */
-    .swiper-slide {
-        height: auto !important;
-    }
-
-    .services-img-bg {
-        min-height: 250px !important;
-    }
-
-    /* Solutions Section Mobile */
-    dotlottie-wc {
-        height: 300px !important;
-        /* Reasonable height for mobile */
-    }
-
-    /* Accordion adjustments */
-    .accordion-button {
-        font-size: 1rem !important;
-        padding: 1rem !important;
-    }
-
-    /* Hero Content Specifics */
-    /* Hero Content Specifics */
-    .hero-title {
-        font-size: 6rem !important;
-        /* Increased for impact */
-        line-height: 1.2 !important;
-        margin-bottom: 1rem !important;
-        word-break: normal !important;
-        overflow-wrap: normal !important;
         width: 100% !important;
-        /* Ensure full width */
         max-width: none !important;
-        /* Remove any max-width constraints */
+        font-weight: 800 !important;
     }
 
     .hero-subtitle {
-        font-size: 1.5rem !important;
-        /* Increased for better readability */
-        line-height: 1.5 !important;
-        margin-bottom: 2rem !important;
+        font-size: 1.15rem !important;
+        line-height: 1.6 !important;
+        margin-bottom: 1rem !important;
+        text-align: left !important;
         max-width: none !important;
         width: 100% !important;
+        opacity: 0.9;
     }
 
-    /* Maximize content width */
     .card-img-overlay {
-        padding: 1rem 0.5rem !important;
-        /* Minimize side padding */
+        padding: 8.5rem 1.75rem 3rem 1.75rem !important;
+        justify-content: flex-start !important;
+        align-items: flex-start !important;
     }
 
     .header-card .container {
         padding-left: 0.5rem !important;
         padding-right: 0.5rem !important;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
     }
 
-    /* 1. FORCE MAIN LAYOUT TO VERTICAL STACK (Text top, Stats bottom) */
     .hero-main-row {
         flex-direction: column !important;
+        align-items: flex-start !important;
+        margin: 0 !important;
     }
 
-    .hero-main-row>.col {
-        width: 100% !important;
-    }
-
-    /* 2. STATS ROW: VERTICAL STACK (15+ on top of 120+, etc.) */
     .stats-row {
         display: flex !important;
         flex-direction: column !important;
-        gap: 1.5rem;
+        gap: 1.25rem;
         width: 100%;
-        margin-top: 5rem;
-        /* Increased spacing to push stats lower */
-        padding: 0;
+        margin-top: auto !important;
+        padding-top: 3rem;
     }
 
     .stats-row>.col {
         width: 100% !important;
-        text-align: left;
-        padding: 0;
-        margin: 0;
+        text-align: left !important;
+        padding: 0 !important;
     }
 
     .hero-number {
-        font-size: 3rem !important;
-        /* Increased for impact */
-        white-space: nowrap !important;
-        line-height: 1;
-        margin-bottom: 0.25rem;
-
+        font-size: 1.75rem !important;
+        line-height: 1 !important;
+        margin-bottom: 0.1rem !important;
+        font-weight: 700 !important;
     }
 
     .hero-text {
-        font-size: 2rem !important;
-        font-weight: 400;
-        opacity: 0.9;
-        line-height: 1.2;
-    }
-
-    .hero-subtitle {
-        font-size: 3rem !important;
-        line-height: 1.6 !important;
-        margin-bottom: 3rem !important;
-        text-align: left;
+        font-size: 0.9rem !important;
+        font-weight: 400 !important;
+        opacity: 0.8;
+        line-height: 1.2 !important;
+        margin: 0 !important;
     }
 }
 
@@ -400,6 +363,9 @@ body {
     /* 150% */
     max-width: 38.5rem;
 }
+
+/* Specific protection for homepage hero subtitles on mobile if needed */
+/* Giant override removed for better scaling */
 
 .hero-number {
     color: #FFF;
@@ -1214,6 +1180,7 @@ footer {
         font-size: 1.5rem;
     }
 }
+
 /* Quote Modal Styles */
 .quote-modal-overlay {
     position: fixed;
@@ -1240,8 +1207,15 @@ footer {
 }
 
 @keyframes modalFadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .quote-modal-close {
@@ -1315,7 +1289,7 @@ footer {
     .quote-modal-body {
         padding: 20px;
     }
-    
+
     .quote-modal-content {
         max-height: 90vh;
         overflow-y: auto;

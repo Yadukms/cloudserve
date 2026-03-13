@@ -40,7 +40,7 @@ const Services = () => {
                             <div className="swiper-slide">
                                 <div className="card service-body h-100 border-0 bg-transparent">
                                     <div className="row g-4 h-100">
-                                        <div className="col-lg-6 col-md-12">
+                                        <div className="col-lg-6 col-md-12 order-2 order-lg-1">
                                             <div className="card h-100 border-0" style={{ backgroundColor: 'rgba(44, 177, 143, 0.50)', borderRadius: '0.8rem', padding: '2rem' }}>
                                                 <div className="card-body d-flex flex-column justify-content-center">
                                                     <h5 className="service-title">Structured Cabling & Fiber Optic Solutions</h5>
@@ -48,9 +48,9 @@ const Services = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-lg-6 col-md-12">
+                                        <div className="col-lg-6 col-md-12 order-1 order-lg-2">
                                             <div className="card h-100 border-0">
-                                                <div className="services-img-bg" style={{ backgroundImage: "url('/static/images/fibre_optics.webp')", height: '100%', minHeight: '350px' }}></div>
+                                                <div className="services-img-bg" style={{ backgroundImage: "url('/static/images/fibre_optics.webp')", height: '100%', minHeight: '280px', borderRadius: '0.8rem' }}></div>
                                             </div>
                                         </div>
                                     </div>
@@ -61,7 +61,7 @@ const Services = () => {
                             <div className="swiper-slide">
                                 <div className="card service-body h-100 border-0 bg-transparent">
                                     <div className="row g-4 h-100">
-                                        <div className="col-lg-6 col-md-12">
+                                        <div className="col-lg-6 col-md-12 order-2 order-lg-1">
                                             <div className="card h-100 border-0" style={{ backgroundColor: 'rgba(44, 177, 143, 0.50)', borderRadius: '0.8rem', padding: '2rem' }}>
                                                 <div className="card-body d-flex flex-column justify-content-center">
                                                     <h5 className="service-title">CCTV & Video Surveillance Solutions</h5>
@@ -69,9 +69,9 @@ const Services = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-lg-6 col-md-12">
+                                        <div className="col-lg-6 col-md-12 order-1 order-lg-2">
                                             <div className="card h-100 border-0">
-                                                <div className="services-img-bg" style={{ backgroundImage: "url('/static/images/s2.jpg')", height: '100%', minHeight: '350px' }}></div>
+                                                <div className="services-img-bg" style={{ backgroundImage: "url('/static/images/s2.jpg')", height: '100%', minHeight: '280px', borderRadius: '0.8rem' }}></div>
                                             </div>
                                         </div>
                                     </div>
@@ -82,19 +82,17 @@ const Services = () => {
                             <div className="swiper-slide">
                                 <div className="card service-body h-100 border-0 bg-transparent">
                                     <div className="row g-4 h-100">
-                                        <div className="col-lg-6 col-md-12">
+                                        <div className="col-lg-6 col-md-12 order-2 order-lg-1">
                                             <div className="card h-100 border-0" style={{ backgroundColor: 'rgba(44, 177, 143, 0.50)', borderRadius: '0.8rem', padding: '2rem' }}>
                                                 <div className="card-body d-flex flex-column justify-content-center">
                                                     <h5 className="service-title">IPTV & SMATV Distribution Systems</h5>
-                                                    <p className="service-subtext mt-4">High-definition IPTV/SMATV solutions for hotels, corporate buildings, residential towers, and commercial complexes.
-
-                                                    </p>
+                                                    <p className="service-subtext mt-4">High-definition IPTV/SMATV solutions for hotels, corporate buildings, residential towers, and commercial complexes.</p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="col-lg-6 col-md-12">
+                                        <div className="col-lg-6 col-md-12 order-1 order-lg-2">
                                             <div className="card h-100 border-0">
-                                                <div className="services-img-bg" style={{ backgroundImage: "url('/static/images/s3.jpg')", height: '100%', minHeight: '350px' }}></div>
+                                                <div className="services-img-bg" style={{ backgroundImage: "url('/static/images/s3.jpg')", height: '100%', minHeight: '280px', borderRadius: '0.8rem' }}></div>
                                             </div>
                                         </div>
                                     </div>

@@ -122,23 +122,23 @@ const ContactUs = () => {
               <img src="/static/icons/icon-park-outline_dot.svg" alt="dot" />
               <p className="pill-text">Contact Us</p>
             </div>
-            <h1 className="section-heading-1" style={{ textAlign: 'left' }}>Send a quick message</h1>
+            <h1 className="section-heading-1" style={{ textAlign: 'left', fontSize: 'clamp(1.75rem, 5vw, 2.5rem)' }}>Send a quick message</h1>
           </div>
 
           <div className="row mt-5">
             {/* Contact Info Card */}
             <div className="col-lg-5 mb-5 mb-lg-0">
-              <div className="p-5 h-100" style={{ backgroundColor: '#F3F4F6', borderRadius: '1.5rem' }}>
-                <h3 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '2rem' }}>Contact Information</h3>
+              <div className="p-4 p-lg-5 h-100" style={{ backgroundColor: '#F3F4F6', borderRadius: '1.5rem' }}>
+                <h3 style={{ fontSize: '1.4rem', fontWeight: '600', marginBottom: '1.5rem' }}>Contact Information</h3>
 
                 <div className="mb-4">
-                  <p className="mb-1" style={{ fontSize: '0.9rem', color: '#666' }}>Email</p>
-                  <p style={{ fontWeight: '500', fontSize: '1.1rem' }}>info@cloudserve.com</p>
+                  <p className="mb-1" style={{ fontSize: '1rem', color: '#666' }}>Email</p>
+                  <a href="mailto:info@cloudserve.qa" className="no-decoration" style={{ color: '#0B5394', fontWeight: '600', fontSize: '1.1rem' }}>info@cloudserve.qa</a>
                 </div>
 
                 <div className="mb-4">
-                  <p className="mb-1" style={{ fontSize: '0.9rem', color: '#666' }}>Phone</p>
-                  <p style={{ fontWeight: '500', fontSize: '1.1rem' }}>+91 89647158</p>
+                  <p className="mb-1" style={{ fontSize: '1rem', color: '#666' }}>Phone</p>
+                  <a href="tel:+97444440000" className="no-decoration" style={{ color: '#0B5394', fontWeight: '600', fontSize: '1.1rem' }}>+974 4444 0000</a>
                 </div>
 
                 <div className="mb-4">

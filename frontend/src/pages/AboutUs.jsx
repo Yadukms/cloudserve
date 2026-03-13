@@ -33,7 +33,7 @@ const AboutUs = () => {
                     <div className="row mt-5 gx-5">
                         <div className="col-lg-6">
                             <h3 style={{ fontSize: '1.75rem', fontWeight: '600', marginBottom: '1.5rem' }}>Established in 1999</h3>
-                            <p style={{ color: '#000', lineHeight: '1.8', fontSize: '1rem', textAlign: 'justify' }}>
+                            <p style={{ color: '#000', lineHeight: '1.8', fontSize: 'clamp(1rem, 4vw, 1.1rem)' }}>
                                 Cogent was founded on the premise that bandwidth can be treated like a commodity - produce mass amounts and position it for sale based on price. Leveraging new technologies, we built our own IP data network independent of the traditional voice-based networks owned by the RBOCs (regional bell operating companies). By doing so, we believed we could reduce the cost of high quality bandwidth down to a level never before offered in the marketplace. In 2002, Cogent acquired the majority of the U.S. operations of PSINet, Inc. In 2023, Cogent acquired the Sprint GMG business from T-Mobile US. Today, we are widely recognized as one of the largest carriers of Internet traffic in the world.
                             </p>
                         </div>
@@ -47,13 +47,13 @@ const AboutUs = () => {
                                     "Certified partnerships with leading vendors",
                                     "ISO 27001 security compliance"
                                 ].map((item, index) => (
-                                    <div key={index} className="d-flex align-items-start">
-                                        <div className="me-3 mt-1">
-                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <div key={index} className="d-flex align-items-center mb-3">
+                                        <div className="me-3 flex-shrink-0">
+                                            <svg width="24" height="24" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M16.6666 5L7.49992 14.1667L3.33325 10" stroke="#10B981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                             </svg>
                                         </div>
-                                        <p className="mb-0" style={{ fontWeight: '500' }}>{item}</p>
+                                        <p className="mb-0" style={{ fontWeight: '500', fontSize: 'clamp(1rem, 3.5vw, 1.1rem)' }}>{item}</p>
                                     </div>
                                 ))}
                             </div>

@@ -42,22 +42,26 @@ const Navbar = () => {
                 <div className="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
                     <ul className="navbar-nav">
                         <li className="nav-item nav-item-spaced">
-                            <Link className={`nav-link ${isActive('/') ? 'active' : ''}`} to="/">Home</Link>
+                            <Link className={`nav-link ${isActive('/') ? 'active' : ''}`} to="/" onClick={() => document.getElementById('navbarNavDropdown').classList.remove('show')}>Home</Link>
                         </li>
                         <li className="nav-item nav-item-spaced">
-                            <Link className={`nav-link ${isActive('/about-us') ? 'active' : ''}`} to="/about-us">About Us</Link>
+                            <Link className={`nav-link ${isActive('/about-us') ? 'active' : ''}`} to="/about-us" onClick={() => document.getElementById('navbarNavDropdown').classList.remove('show')}>About Us</Link>
                         </li>
                         <li className="nav-item nav-item-spaced">
-                            <Link className={`nav-link ${isActive('/brands') ? 'active' : ''}`} to="/brands">Brands</Link>
+                            <Link className={`nav-link ${isActive('/brands') ? 'active' : ''}`} to="/brands" onClick={() => document.getElementById('navbarNavDropdown').classList.remove('show')}>Brands</Link>
                         </li>
                         <li className="nav-item nav-item-spaced">
-                            <Link className={`nav-link ${isActive('/products') ? 'active' : ''}`} to="/products">Products</Link>
+                            <Link className={`nav-link ${isActive('/products') ? 'active' : ''}`} to="/products" onClick={() => document.getElementById('navbarNavDropdown').classList.remove('show')}>Products</Link>
                         </li>
                         <li className="nav-item nav-item-spaced">
-                            <Link className={`nav-link ${isActive('/services') ? 'active' : ''}`} to="/services">Services</Link>
+                            <Link className={`nav-link ${isActive('/services') ? 'active' : ''}`} to="/services" onClick={() => document.getElementById('navbarNavDropdown').classList.remove('show')}>Services</Link>
                         </li>
                         <li className="nav-item nav-item-spaced">
-                            <Link className={`nav-link ${isActive('/contact-us') ? 'active' : ''}`} to="/contact-us">Contact Us</Link>
+                            <Link className={`nav-link ${isActive('/contact-us') ? 'active' : ''}`} to="/contact-us" onClick={() => document.getElementById('navbarNavDropdown').classList.remove('show')}>Contact Us</Link>
+                        </li>
+                        {/* Mobile-only Request a Quote button */}
+                        <li className="nav-item d-lg-none mt-3">
+                            <button className="btn req-btn w-100" onClick={() => { setShowQuoteModal(true); document.getElementById('navbarNavDropdown').classList.remove('show'); }}>Request a Quote</button>
                         </li>
                     </ul>
                 </div>
