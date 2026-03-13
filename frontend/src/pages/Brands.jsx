@@ -175,7 +175,7 @@ const Brands = () => {
                     <div className="gradient-overlay"></div>
                     <div className="card-img-overlay d-flex flex-column justify-content-end align-items-start" style={{ paddingBottom: '3rem' }}>
                         <div className="container">
-                            <h1 className="hero-title" style={{ fontSize: '4rem' }}>Global Technology Partners</h1>
+                            <h1 className="hero-title">Global Technology Partners</h1>
                         </div>
                     </div>
                 </div>

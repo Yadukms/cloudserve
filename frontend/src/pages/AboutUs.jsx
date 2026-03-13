@@ -6,7 +6,7 @@ const AboutUs = () => {
     return (
         <>
             {/* Hero Section */}
-            <section className="header" style={{ height: '60vh' }}>
+            <section className="header about-us-header" style={{ height: '60vh' }}>
                 <div className="card header-card" style={{ height: '100%', minHeight: 'auto', overflow: 'hidden' }}>
                     <div style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#1a1a1a', zIndex: -1 }}>
                         <img src="/static/images/about.png" alt="About Us Hero" style={{ width: '100%', height: '100%', objectFit: 'cover', opacity: 0.6 }} />
@@ -14,7 +14,7 @@ const AboutUs = () => {
                     <div className="gradient-overlay"></div>
                     <div className="card-img-overlay d-flex flex-column justify-content-end align-items-start" style={{ paddingBottom: '3rem' }}>
                         <div className="container">
-                            <h1 className="hero-title" style={{ fontSize: '4rem' }}>About us</h1>
+                            <h1 className="hero-title">About us</h1>
                         </div>
                     </div>
                 </div>

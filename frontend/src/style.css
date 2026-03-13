@@ -206,17 +206,20 @@ body {
         padding-bottom: 3rem;
     }
 
-    .hero-title {
+    /* Protected Homepage styles */
+    .home-header .hero-title {
         font-size: clamp(2.5rem, 10vw, 3.8rem) !important;
         line-height: 1.1 !important;
         margin-bottom: 2rem !important;
+        /* Increased margin to match reference */
         text-align: left !important;
+        /* Changed from center to left */
         width: 100% !important;
         max-width: none !important;
         font-weight: 800 !important;
     }
 
-    .hero-subtitle {
+    .home-header .hero-subtitle {
         font-size: 1.15rem !important;
         line-height: 1.6 !important;
         margin-bottom: 1rem !important;
@@ -226,10 +229,38 @@ body {
         opacity: 0.9;
     }
 
-    .card-img-overlay {
-        padding: 8.5rem 1.75rem 3rem 1.75rem !important;
+    .home-header .card-img-overlay {
+        padding: 8.5rem 1.75rem 5rem 1.75rem !important;
         justify-content: flex-start !important;
         align-items: flex-start !important;
+        position: relative !important;
+        /* Change to relative to prevent content overlap/clipping */
+        height: auto !important;
+        min-height: 100vh;
+        z-index: 1;
+    }
+
+    .home-header .card.header-card {
+        height: auto !important;
+        min-height: 100vh !important;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Styles for other pages (About Us, Brands, etc.) */
+    .header:not(.home-header) .hero-title {
+        font-size: clamp(2.2rem, 8vw, 3rem) !important;
+        text-align: center !important;
+        width: 100% !important;
+        margin-bottom: 0 !important;
+    }
+
+    .header:not(.home-header) .card-img-overlay {
+        padding: 12rem 1.5rem 4rem 1.5rem !important;
+        /* Increased top padding to clear navbar */
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
     }
 
     .header-card .container {
@@ -258,7 +289,14 @@ body {
     .stats-row>.col {
         width: 100% !important;
         text-align: left !important;
+        /* Explicitly left align stats */
         padding: 0 !important;
+        margin-bottom: 1.5rem;
+        /* Space between stat items */
+    }
+
+    .stats-row>.col:last-child {
+        margin-bottom: 0;
     }
 
     .hero-number {
@@ -317,12 +355,7 @@ body {
 }
 
 @media (max-width: 998px) {
-    .card-img-overlay {
-        padding: 1rem;
-        justify-content: center !important;
-        padding: 1.5rem !important;
-        padding-bottom: 3rem !important;
-    }
+    /* Removed redundant general card-img-overlay override that was causing overlap */
 }
 
 .hero-title {

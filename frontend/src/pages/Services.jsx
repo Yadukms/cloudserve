@@ -12,7 +12,7 @@ const Services = () => {
                     <div className="gradient-overlay"></div>
                     <div className="card-img-overlay d-flex flex-column justify-content-end align-items-start" style={{ paddingBottom: '3rem' }}>
                         <div className="container">
-                            <h1 className="hero-title" style={{ fontSize: '4rem' }}>Services</h1>
+                            <h1 className="hero-title">Services</h1>
                         </div>
                     </div>
                 </div>

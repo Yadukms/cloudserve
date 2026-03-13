@@ -177,7 +177,7 @@ const Products = () => {
                     <div className="gradient-overlay"></div>
                     <div className="card-img-overlay d-flex flex-column justify-content-end align-items-start" style={{ paddingBottom: '3rem' }}>
                         <div className="container">
-                            <h1 className="hero-title" style={{ fontSize: '4rem' }}>Products</h1>
+                            <h1 className="hero-title">Products</h1>
                         </div>
                     </div>
                 </div>

@@ -3,72 +3,72 @@ import React, { useState } from 'react';
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
-  fullName: "",
-  email: "",
-  phone: "",
-  message: ""
-});
-const handleChange = (e) => {
-  setFormData({
-    ...formData,
-    [e.target.name]: e.target.value
+    fullName: "",
+    email: "",
+    phone: "",
+    message: ""
   });
-};
-// const handleSubmit = async (e) => {
-//   e.preventDefault();
-
-//   try {
-
-//     const response = await fetch("http://localhost:5000/send-email", {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json"
-//       },
-//       body: JSON.stringify(formData)
-//     });
-
-//     const data = await response.json();
-
-//     console.log(data);
-
-//     alert("Message sent successfully");
-
-//   } catch (error) {
-
-//     console.error(error);
-
-//     alert("Failed to send message");
-
-//   }
-// };
-const handleSubmit = async (e) => {
-  e.preventDefault();
-
-  if (!formData.fullName || !formData.email || !formData.message) {
-    alert("Please fill all required fields");
-    return;
-  }
-
-  try {
-
-    const response = await fetch("http://localhost:5000/send-email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(formData)
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
     });
+  };
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
 
-    const data = await response.json();
+  //   try {
 
-    alert("Message sent successfully");
+  //     const response = await fetch("http://localhost:5000/send-email", {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json"
+  //       },
+  //       body: JSON.stringify(formData)
+  //     });
 
-  } catch (error) {
+  //     const data = await response.json();
 
-    alert("Failed to send message");
+  //     console.log(data);
 
-  }
-};
+  //     alert("Message sent successfully");
+
+  //   } catch (error) {
+
+  //     console.error(error);
+
+  //     alert("Failed to send message");
+
+  //   }
+  // };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    if (!formData.fullName || !formData.email || !formData.message) {
+      alert("Please fill all required fields");
+      return;
+    }
+
+    try {
+
+      const response = await fetch("http://localhost:5000/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      const data = await response.json();
+
+      alert("Message sent successfully");
+
+    } catch (error) {
+
+      alert("Failed to send message");
+
+    }
+  };
   return (
     <div className="contact-us-page">
       {/* Hero Section */}
@@ -81,7 +81,7 @@ const handleSubmit = async (e) => {
           <div className="gradient-overlay"></div>
           <div className="card-img-overlay d-flex flex-column justify-content-end align-items-start" style={{ paddingBottom: '3rem' }}>
             <div className="container">
-              <h1 className="hero-title" style={{ fontSize: '4rem' }}>Contact Us</h1>
+              <h1 className="hero-title">Contact Us</h1>
             </div>
           </div>
         </div>
@@ -232,52 +232,52 @@ const handleSubmit = async (e) => {
                 <div className="mb-4">
                   <label className="form-label" style={{ fontWeight: '600' }}>Full Name *</label>
                   <input
-type="text"
-name="fullName"
-className="form-control p-3"
-placeholder="Enter your full name"
-value={formData.fullName}
-onChange={handleChange}
-/>
+                    type="text"
+                    name="fullName"
+                    className="form-control p-3"
+                    placeholder="Enter your full name"
+                    value={formData.fullName}
+                    onChange={handleChange}
+                  />
                   {/* <input type="text" className="form-control p-3" placeholder="Enter your full name" style={{ borderRadius: '0.5rem', backgroundColor: '#fff', border: '1px solid #dee2e6' }} /> */}
                 </div>
 
                 <div className="mb-4">
                   <label className="form-label" style={{ fontWeight: '600' }}>Email Address *</label>
                   <input
-type="email"
-name="email"
-className="form-control p-3"
-placeholder="Enter your email address"
-value={formData.email}
-onChange={handleChange}
-/>
+                    type="email"
+                    name="email"
+                    className="form-control p-3"
+                    placeholder="Enter your email address"
+                    value={formData.email}
+                    onChange={handleChange}
+                  />
                   {/* <input type="email" className="form-control p-3" placeholder="Enter your email address" style={{ borderRadius: '0.5rem', backgroundColor: '#fff', border: '1px solid #dee2e6' }} /> */}
                 </div>
 
                 <div className="mb-4">
                   <label className="form-label" style={{ fontWeight: '600' }}>Phone Number</label>
                   <input
-type="tel"
-name="phone"
-className="form-control p-3"
-placeholder="Enter your phone number"
-value={formData.phone}
-onChange={handleChange}
-/>
+                    type="tel"
+                    name="phone"
+                    className="form-control p-3"
+                    placeholder="Enter your phone number"
+                    value={formData.phone}
+                    onChange={handleChange}
+                  />
                   {/* <input type="tel" className="form-control p-3" placeholder="Enter your phone number" style={{ borderRadius: '0.5rem', backgroundColor: '#fff', border: '1px solid #dee2e6' }} /> */}
                 </div>
 
                 <div className="mb-4">
                   <label className="form-label" style={{ fontWeight: '600' }}>Message * </label>
                   <textarea
-name="message"
-className="form-control p-3"
-rows="5"
-placeholder="Tell us about your needs..."
-value={formData.message}
-onChange={handleChange}
-/>
+                    name="message"
+                    className="form-control p-3"
+                    rows="5"
+                    placeholder="Tell us about your needs..."
+                    value={formData.message}
+                    onChange={handleChange}
+                  />
                   {/* <textarea className="form-control p-3" rows="5" placeholder="Tell us about your needs...." style={{ borderRadius: '0.5rem', backgroundColor: '#fff', border: '1px solid #dee2e6' }}></textarea> */}
                 </div>
 
