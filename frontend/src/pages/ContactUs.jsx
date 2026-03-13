@@ -1,6 +1,45 @@
-import React from 'react';
+// import React from 'react';
+import React, { useState } from 'react';
 
 const ContactUs = () => {
+  const [formData, setFormData] = useState({
+  fullName: "",
+  email: "",
+  phone: "",
+  message: ""
+});
+const handleChange = (e) => {
+  setFormData({
+    ...formData,
+    [e.target.name]: e.target.value
+  });
+};const handleSubmit = async (e) => {
+  e.preventDefault();
+
+  try {
+
+    const response = await fetch("http://localhost:5000/send-email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(formData)
+    });
+
+    const data = await response.json();
+
+    console.log(data);
+
+    alert("Message sent successfully");
+
+  } catch (error) {
+
+    console.error(error);
+
+    alert("Failed to send message");
+
+  }
+};
   return (
     <div className="contact-us-page">
       {/* Hero Section */}
@@ -159,29 +198,62 @@ const ContactUs = () => {
 
             {/* Form */}
             <div className="col-lg-6 offset-lg-1">
-              <form>
+              {/* <form> */}
+              <form onSubmit={handleSubmit}>
                 <div className="mb-4">
                   <label className="form-label" style={{ fontWeight: '600' }}>Full Name *</label>
-                  <input type="text" className="form-control p-3" placeholder="Enter your full name" style={{ borderRadius: '0.5rem', backgroundColor: '#fff', border: '1px solid #dee2e6' }} />
+                  <input
+type="text"
+name="fullName"
+className="form-control p-3"
+placeholder="Enter your full name"
+value={formData.fullName}
+onChange={handleChange}
+/>
+                  {/* <input type="text" className="form-control p-3" placeholder="Enter your full name" style={{ borderRadius: '0.5rem', backgroundColor: '#fff', border: '1px solid #dee2e6' }} /> */}
                 </div>
 
                 <div className="mb-4">
                   <label className="form-label" style={{ fontWeight: '600' }}>Email Address *</label>
-                  <input type="email" className="form-control p-3" placeholder="Enter your email address" style={{ borderRadius: '0.5rem', backgroundColor: '#fff', border: '1px solid #dee2e6' }} />
+                  <input
+type="email"
+name="email"
+className="form-control p-3"
+placeholder="Enter your email address"
+value={formData.email}
+onChange={handleChange}
+/>
+                  {/* <input type="email" className="form-control p-3" placeholder="Enter your email address" style={{ borderRadius: '0.5rem', backgroundColor: '#fff', border: '1px solid #dee2e6' }} /> */}
                 </div>
 
                 <div className="mb-4">
                   <label className="form-label" style={{ fontWeight: '600' }}>Phone Number</label>
-                  <input type="tel" className="form-control p-3" placeholder="Enter your phone number" style={{ borderRadius: '0.5rem', backgroundColor: '#fff', border: '1px solid #dee2e6' }} />
+                  <input
+type="tel"
+name="phone"
+className="form-control p-3"
+placeholder="Enter your phone number"
+value={formData.phone}
+onChange={handleChange}
+/>
+                  {/* <input type="tel" className="form-control p-3" placeholder="Enter your phone number" style={{ borderRadius: '0.5rem', backgroundColor: '#fff', border: '1px solid #dee2e6' }} /> */}
                 </div>
 
                 <div className="mb-4">
-                  <label className="form-label" style={{ fontWeight: '600' }}>Message *</label>
-                  <textarea className="form-control p-3" rows="5" placeholder="Tell us about your needs...." style={{ borderRadius: '0.5rem', backgroundColor: '#fff', border: '1px solid #dee2e6' }}></textarea>
+                  <label className="form-label" style={{ fontWeight: '600' }}>Message * </label>
+                  <textarea
+name="message"
+className="form-control p-3"
+rows="5"
+placeholder="Tell us about your needs..."
+value={formData.message}
+onChange={handleChange}
+/>
+                  {/* <textarea className="form-control p-3" rows="5" placeholder="Tell us about your needs...." style={{ borderRadius: '0.5rem', backgroundColor: '#fff', border: '1px solid #dee2e6' }}></textarea> */}
                 </div>
 
                 <button type="submit" className="btn btn-primary w-100 p-3" style={{ backgroundColor: '#0B5394', border: 'none', borderRadius: '0.5rem', fontWeight: '500' }}>
-                  Send Message <span className="ms-2">POST</span>
+                  Send Message <span className="ms-2"></span>
                   {/* Replaced paper plane icon with generic text or icon if available, using text for now or simple unicode */}
                 </button>
               </form>
