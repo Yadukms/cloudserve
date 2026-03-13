@@ -1,7 +1,8 @@
-// import React from 'react';
 import React, { useState } from 'react';
+import QuoteModal from '../components/QuoteModal';
 
 const ContactUs = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -103,7 +104,7 @@ const ContactUs = () => {
                 <p className="section-subheading-1" style={{ textAlign: 'left', maxWidth: '100%', marginTop: '1rem', fontWeight: '500', color: '#000' }}>
                   Send us a message using the contact form below.
                 </p>
-                <button className="btn about-btn mt-4">
+                <button className="btn about-btn mt-4" onClick={() => setIsModalOpen(true)}>
                   Contact Us <span>&#8594;</span>
                 </button>
               </div>
@@ -219,7 +220,7 @@ const ContactUs = () => {
                   <p style={{ fontWeight: '500', fontSize: '1.1rem' }}>+91 89647158</p>
                 </div>
 
-                <button className="btn about-btn">
+                <button className="btn about-btn" onClick={() => setIsModalOpen(true)}>
                   Contact Us <span>&#8594;</span>
                 </button>
               </div>
@@ -289,6 +290,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
+      <QuoteModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
     </div>
   );
 };

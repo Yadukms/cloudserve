@@ -41,7 +41,7 @@ const Services = () => {
                                 <div className="card service-body h-100 border-0 bg-transparent">
                                     <div className="row g-4 h-100">
                                         <div className="col-lg-6 col-md-12 order-2 order-lg-1">
-                                            <div className="card h-100 border-0" style={{ backgroundColor: 'rgba(44, 177, 143, 0.50)', borderRadius: '0.8rem', padding: '2rem' }}>
+                                            <div className="card border-0" style={{ backgroundColor: 'rgba(44, 177, 143, 0.50)', borderRadius: '0.8rem', padding: '2rem' }}>
                                                 <div className="card-body d-flex flex-column justify-content-center">
                                                     <h5 className="service-title">Structured Cabling & Fiber Optic Solutions</h5>
                                                     <p className="service-subtext mt-4">End-to-end structured cabling systems using Cat5e, Cat6, Cat6A, and high-quality fiber for reliable connectivity in offices, enterprises, and campuses.</p>
@@ -62,7 +62,7 @@ const Services = () => {
                                 <div className="card service-body h-100 border-0 bg-transparent">
                                     <div className="row g-4 h-100">
                                         <div className="col-lg-6 col-md-12 order-2 order-lg-1">
-                                            <div className="card h-100 border-0" style={{ backgroundColor: 'rgba(44, 177, 143, 0.50)', borderRadius: '0.8rem', padding: '2rem' }}>
+                                            <div className="card border-0" style={{ backgroundColor: 'rgba(44, 177, 143, 0.50)', borderRadius: '0.8rem', padding: '2rem' }}>
                                                 <div className="card-body d-flex flex-column justify-content-center">
                                                     <h5 className="service-title">CCTV & Video Surveillance Solutions</h5>
                                                     <p className="service-subtext mt-4">Complete IP-based surveillance including cameras, NVRs, VMS platforms, command centers, analytics, and monitoring solutions for all industry sectors.</p>
@@ -83,7 +83,7 @@ const Services = () => {
                                 <div className="card service-body h-100 border-0 bg-transparent">
                                     <div className="row g-4 h-100">
                                         <div className="col-lg-6 col-md-12 order-2 order-lg-1">
-                                            <div className="card h-100 border-0" style={{ backgroundColor: 'rgba(44, 177, 143, 0.50)', borderRadius: '0.8rem', padding: '2rem' }}>
+                                            <div className="card border-0" style={{ backgroundColor: 'rgba(44, 177, 143, 0.50)', borderRadius: '0.8rem', padding: '2rem' }}>
                                                 <div className="card-body d-flex flex-column justify-content-center">
                                                     <h5 className="service-title">IPTV & SMATV Distribution Systems</h5>
                                                     <p className="service-subtext mt-4">High-definition IPTV/SMATV solutions for hotels, corporate buildings, residential towers, and commercial complexes.</p>

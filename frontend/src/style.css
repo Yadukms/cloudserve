@@ -599,6 +599,12 @@ body {
     transform: scale(1.1);
 }
 
+@media (max-width: 991px) {
+    .card.product-card {
+        margin: 0 auto !important;
+    }
+}
+
 .swiper-logo-div {
     height: 7.5rem;
     padding: 1rem 3rem;
@@ -800,6 +806,25 @@ body {
     line-height: 3rem;
     /* 150% */
     letter-spacing: -0.1rem;
+}
+
+@media (max-width: 991px) {
+    .card.service-body {
+        max-height: none !important;
+        height: auto !important;
+        padding: 1.5rem !important;
+    }
+
+    .service-title {
+        font-size: 1.5rem !important;
+        line-height: normal !important;
+        letter-spacing: normal !important;
+    }
+
+    .service-subtext {
+        margin-top: 1rem !important;
+        font-size: 0.9rem !important;
+    }
 }
 
 .service-subtext {
